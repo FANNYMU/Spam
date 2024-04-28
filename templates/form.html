@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Text</title>
+</head>
+<body>
+    <h2>Masukkan Informasi</h2>
+    <form method="post">
+        <label for="lokasi">Lokasi Text:</label><br>
+        <input type="text" id="lokasi" name="lokasi" value="{{ request.form.get('lokasi', '') }}"><br>
+        <label for="pesan">Pesan:</label><br>
+        <textarea id="pesan" name="pesan" rows="4" cols="50">{{ request.form.get('pesan', '') }}</textarea><br>
+        <label for="jumlah">Jumlah Spam:</label><br>
+        <input type="number" id="jumlah" name="jumlah" value="{{ request.form.get('jumlah', '') }}"><br>
+        <label for="berhenti">Berhenti setelah 1000:</label><br>
+        <input type="checkbox" id="berhenti" name="berhenti" value="y"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
